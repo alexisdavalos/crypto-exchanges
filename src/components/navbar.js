@@ -16,8 +16,8 @@ const Navbar = () => {
 							to="/"
 							className={({ isActive }) =>
 								isActive
-									? "text-base font-medium text-purple-600 dark:text-yellow-500 inline-flex items-center"
-									: "text-base font-medium dark:text-white text-gray-500 hover:text-gray-900 dark:hover:text-gray-400 inline-flex items-center"
+									? "text-xl font-medium text-purple-600 dark:text-yellow-500 inline-flex items-center"
+									: "text-xl font-medium dark:text-white text-gray-500 hover:text-gray-900 dark:hover:text-gray-400 inline-flex items-center"
 							}
 						>
 							<svg
