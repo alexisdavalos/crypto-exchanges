@@ -6,7 +6,7 @@ const Navbar = () => {
 	return (
 		<header>
 			<div className="relative bg-primary">
-				<div className="flex justify-between items-center mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-16">
+				<div className="flex justify-between items-center mx-auto px-12 py-6 md:justify-start md:space-x-10 lg:px-16">
 					<div className="flex justify-start flex-1">
 						<span className="sr-only">Dark Mode Toggle</span>
 						<DarkModeToggle />
