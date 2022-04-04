@@ -1,26 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./assets/css/App.css";
-
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layout";
+import Home from "./components/home";
+import Exchange from "./components/exchange";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="font-bold text-indigo-500">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link text-4xl text-yellow-600"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Layout>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="exchanges/:exchangeId" element={<Exchange />} />
+			</Routes>
+		</Layout>
+	);
 }
 
 export default App;
