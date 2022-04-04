@@ -4,6 +4,10 @@ Using the Coingecko public API (https://www.coingecko.com/en/api), build an appl
 
 When the user clicks on an exchange, show its details on a separate page. Included in those details should be the name, country, trust rank, logo, year of establishment, social media links, description, and a back-to-main-page button.
 
+## TODO:
+
+- Explore testing with Cypress
+
 ## API Keys
 
 Since this project is using a public keyless API there is no need to hide the api behind env vars
