@@ -36,19 +36,19 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 										</th>
 										<th
 											scope="col"
-											className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
+											className="hidden lg:table-cell px-4 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
 										>
 											Year Est.
 										</th>
 										<th
 											scope="col"
-											className="px-4 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
+											className="hidden lg:table-cell px-4 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-50"
 										>
 											Trust Rank
 										</th>
 										<th
 											scope="col"
-											className="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 dark:text-gray-50 sm:pr-6"
+											className="hidden lg:table-cell py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 dark:text-gray-50 sm:pr-6"
 										>
 											Trust Score
 										</th>
@@ -83,7 +83,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 															href={exchange.url}
 															target="_blank"
 															rel="noopener noreferrer"
-															className="text-gray-500 hover:text-purple-500 dark:hover:text-yellow-500 max-w-xs break-all cursor-pointer"
+															className="text-gray-500 hover:text-purple-500 dark:hover:text-yellow-500 lg:break-all cursor-pointer"
 														>
 															{exchange.url}
 														</a>
@@ -96,7 +96,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 													<strong className="ml-1">BTC</strong>
 												</span>
 											</td>
-											<td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 dark:text-gray-50 sm:pl-6">
+											<td className="hidden lg:table-cell whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 dark:text-gray-50 sm:pl-6">
 												{exchange.year_established ? (
 													<span className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
 														{exchange.year_established}
@@ -107,7 +107,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 													</span>
 												)}
 											</td>
-											<td className="whitespace-nowrap p-4 text-sm text-gray-900 dark:text-gray-50">
+											<td className="hidden lg:table-cell whitespace-nowrap p-4 text-sm text-gray-900 dark:text-gray-50">
 												{exchange.trust_score_rank ? (
 													<span className="inline-flex rounded-full text-xs font-semibold leading-5">
 														{exchange.trust_score_rank}
@@ -118,7 +118,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 													</span>
 												)}
 											</td>
-											<td className="whitespace-nowrap p-4 text-sm text-gray-900 dark:text-gray-50">
+											<td className="hidden lg:table-cell whitespace-nowrap p-4 text-sm text-gray-900 dark:text-gray-50">
 												{exchange.trust_score ? (
 													<span className="inline-flex rounded-full text-xs font-semibold leading-5">
 														{exchange.trust_score}
@@ -145,7 +145,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 								className="bg-gray-50 dark:bg-gray-700 px-4 py-3 flex items-center justify-between border-t border-gray-200 dark:border-gray-600 sm:px-6"
 								aria-label="Pagination"
 							>
-								<div className="hidden sm:block">
+								<div className="block">
 									<div className="text-sm text-gray-700 dark:text-gray-50 inline-flex items-center justify-center space-x-2">
 										<span>Showing</span>
 										<select

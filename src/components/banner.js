@@ -5,7 +5,7 @@ const Banner = ({ perPage }) => {
 		<div data-testid="main-banner" className="relative bg-primary p-8">
 			<div className="absolute inset-x-0 bottom-0 h-1/2"></div>
 			<div className="mx-auto sm:px-6 lg:px-8">
-				<div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+				<div className="relative shadow-xl rounded-2xl overflow-hidden">
 					<div className="absolute inset-0">
 						<img
 							className="h-full w-full object-cover"
@@ -15,17 +15,16 @@ const Banner = ({ perPage }) => {
 						<div className="absolute inset-0 bg-gradient-to-r from-red-800 to-indigo-700 dark:to-yellow-600 mix-blend-multiply"></div>
 					</div>
 					<div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-						<h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+						<h1 className="text-center text-2xl lg:text-4xl xl:text-6xl font-extrabold tracking-tight">
 							<span className="block text-white">Take control of your</span>
 							<span className="block text-purple-400 dark:text-yellow-400 shadow-sm">
 								crypto knowledge
 							</span>
 						</h1>
-						<p className="mt-6 max-w-lg mx-auto text-center text-lg text-white sm:max-w-3xl">
+						<p className="mt-6 max-w-lg mx-auto text-center text-xs sm:text-sm md:text-md lg:text-lg text-white sm:max-w-3xl">
 							Get insights into the top {perPage} crypto exchanges in the world.
-							Break down metrics, see the positives and negatives, figure out
-							what works best for you and always stay on top of what is
-							important to you.. all from the palm of your hand.
+							Break down metrics and always stay on top of what is important to
+							you.. all from the palm of your hand.
 						</p>
 					</div>
 				</div>

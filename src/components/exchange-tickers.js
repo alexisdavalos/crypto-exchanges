@@ -71,7 +71,7 @@ const ExchangeTickers = ({ tickers, perPage, setPerPage, exchangeId }) => {
 															href={coin.trade_url}
 															target="_blank"
 															rel="noopener noreferrer"
-															className="text-gray-500 hover:text-purple-500 dark:hover:text-yellow-500 max-w-xs break-all cursor-pointer"
+															className="text-gray-500 hover:text-purple-500 dark:hover:text-yellow-500 max-w-xs lg:break-all cursor-pointer"
 														>
 															{coin.trade_url}
 														</a>
@@ -124,7 +124,7 @@ const ExchangeTickers = ({ tickers, perPage, setPerPage, exchangeId }) => {
 								className="bg-gray-50 dark:bg-gray-700 px-4 py-3 flex items-center justify-between border-t border-gray-200 dark:border-gray-600 sm:px-6"
 								aria-label="Pagination"
 							>
-								<div className="hidden sm:block">
+								<div className="block">
 									<div className="text-sm text-gray-700 dark:text-gray-50 inline-flex items-center justify-center space-x-2">
 										<span>Showing</span>
 										<select
