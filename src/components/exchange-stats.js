@@ -1,8 +1,31 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 const ExchangeStats = ({ exchangeId, exchangeData }) => {
 	return exchangeData ? (
 		<div className="pt-12 sm:pt-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="font-medium text-gray-900 dark:text-yellow-500">
+					<NavLink
+						to="/"
+						className="text-xl leading-6 inline-flex items-center"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							strokeWidth={2}
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="M11 17l-5-5m0 0l5-5m-5 5h12"
+							/>
+						</svg>
+						<span>Back</span>
+					</NavLink>
+				</div>
 				<div className="max-w-4xl mx-auto text-center flex flex-col items-center">
 					<img
 						className="rounded-full my-2"
