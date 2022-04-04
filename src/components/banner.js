@@ -1,6 +1,6 @@
 import React from "react";
 
-const Banner = () => {
+const Banner = ({ perPage }) => {
 	return (
 		<div data-testid="main-banner" className="relative bg-primary p-8">
 			<div className="absolute inset-x-0 bottom-0 h-1/2"></div>
@@ -22,10 +22,10 @@ const Banner = () => {
 							</span>
 						</h1>
 						<p className="mt-6 max-w-lg mx-auto text-center text-lg text-white sm:max-w-3xl">
-							Get insights into the top 10 crypto exchanges in the world. Break
-							down metrics, see the positives and negatives, figure out what
-							works best for you and always stay on top of what is important to
-							you.. all from the palm of your hand.
+							Get insights into the top {perPage} crypto exchanges in the world.
+							Break down metrics, see the positives and negatives, figure out
+							what works best for you and always stay on top of what is
+							important to you.. all from the palm of your hand.
 						</p>
 					</div>
 				</div>

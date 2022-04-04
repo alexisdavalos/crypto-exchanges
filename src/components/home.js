@@ -28,7 +28,7 @@ const Home = () => {
 	}, [page, perPage]);
 	return (
 		<>
-			<Banner />
+			<Banner perPage={perPage} />
 			<LogoCloud />
 			<ExchangesTable
 				exchanges={exchanges}
