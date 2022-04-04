@@ -56,6 +56,8 @@ const ExchangeUpdates = ({ statusUpdates, exchangeId }) => {
 				</div>
 			</div>
 		</div>
-	) : null;
+	) : (
+		<div className="my-32" />
+	);
 };
 export default ExchangeUpdates;
