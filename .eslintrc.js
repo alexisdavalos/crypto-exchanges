@@ -12,7 +12,14 @@ module.exports = {
 		sourceType: "module",
 	},
 	plugins: ["react"],
-	ignorePatterns: [".eslintrc.*", "prettier.*", "tailwind.*", "*.test.js"],
+	ignorePatterns: [
+		".eslintrc.*",
+		"prettier.*",
+		"tailwind.*",
+		"*.test.js",
+		"postcss.*.js",
+		"cypress",
+	],
 	settings: {
 		react: {
 			version: "detect",
