@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ExchangeUpdates from "./exchange-updates";
 import ExchangeStats from "./exchange-stats";
@@ -8,7 +8,8 @@ import ExchangeTickers from "./exchange-tickers";
 
 const Exchange = () => {
 	let { exchangeId } = useParams();
-	const [exchangeData, setExchangeData] = useState();
+	let navigate = useNavigate();
+	const [exchangeData, setExchangeData] = useState([]);
 	const [statusUpdates, setStatusUpdates] = useState([]);
 	const [cryptoTickers, setCryptoTickers] = useState([]);
 	const [perPage, setPerPage] = useState(10);
@@ -25,7 +26,7 @@ const Exchange = () => {
 				})
 				.catch((error) => {
 					console.error(error);
-					setExchangeData([]);
+					navigate("../error", { replace: true });
 				});
 		}
 	}, [exchangeId]);
