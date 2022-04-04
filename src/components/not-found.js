@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const NotFound = () => {
 	return (
 		<div className="min-h-screen px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
-			<div className="max-w-max mx-auto bg-slate-100 dark:bg-gray-700 dark:bg-opacity-20 bg-opacity-25 p-16 lg:p-32 rounded-lg">
+			<div className="max-w-max mx-auto bg-slate-200 dark:bg-gray-700 dark:bg-opacity-20 bg-opacity-40 p-16 lg:p-32 rounded-lg">
 				<main className="sm:flex">
 					<p className="text-4xl font-extrabold text-purple-600 dark:text-yellow-500 sm:text-5xl">
 						404
