@@ -31,7 +31,7 @@ describe("testing dark mode", () => {
 		cy.get("[data-test=dark-mode-toggle]").click();
 		cy.get("html").should("have.class", "dark");
 		// Revisit the page
-		cy.visit("http://localhost:3000");
+		cy.visit("/");
 		cy.get("html").should("have.class", "dark");
 	});
 });
