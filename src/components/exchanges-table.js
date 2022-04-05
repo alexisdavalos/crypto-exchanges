@@ -19,7 +19,10 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 				<div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
 					<div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
 						<div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-							<table className="min-w-full divide-y divide-gray-300 dark:divide-gray-600">
+							<table
+								data-test="exchanges-table"
+								className="min-w-full divide-y divide-gray-300 dark:divide-gray-600"
+							>
 								<thead className="bg-gray-50 dark:bg-gray-700">
 									<tr className="divide-x divide-gray-200 dark:divide-gray-600">
 										<th
@@ -149,17 +152,17 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 									<div className="text-sm text-gray-700 dark:text-gray-50 inline-flex items-center justify-center space-x-2">
 										<span>Showing</span>
 										<select
-											id="perPage"
-											name="perPage"
+											id="per-page"
+											name="per-page"
 											placeholder={perPage}
 											onInput={(e) => setPerPage(e.target.value)}
 											className="mt-1 block w-full p-2 text-base dark:text-gray-700 border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
 										>
-											<option>10</option>
-											<option>20</option>
-											<option>30</option>
-											<option>40</option>
-											<option>50</option>
+											<option value="10">10</option>
+											<option value="20">20</option>
+											<option value="30">30</option>
+											<option value="40">40</option>
+											<option value="50">50</option>
 										</select>
 										<span>per</span>
 										<span>page</span>
@@ -171,6 +174,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 									</span>
 									{page > 1 ? (
 										<button
+											data-test="exchange-table-previous-page-button"
 											onClick={() => setPage(page - 1)}
 											className="flex items-center justify-center bg-purple-600 dark:bg-yellow-500 bg-origin-border px-4 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
 										>
@@ -178,6 +182,7 @@ const ExchangesTable = ({ exchanges, page, perPage, setPage, setPerPage }) => {
 										</button>
 									) : null}
 									<button
+										data-test="exchange-table-next-page-button"
 										onClick={() => setPage(page + 1)}
 										className="ml-3 flex items-center justify-center bg-purple-600 dark:bg-yellow-500 bg-origin-border px-4 py-1 border border-transparent text-base font-medium rounded-md shadow-sm text-white hover:from-purple-700 hover:to-indigo-700"
 									>

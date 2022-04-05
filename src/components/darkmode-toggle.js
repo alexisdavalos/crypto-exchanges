@@ -5,11 +5,13 @@ import { useContext } from "react";
 const DarkModeToggle = () => {
 	const { darkMode, setDarkMode } = useContext(DarkModeContext);
 	return (
-		<div
+		<button
+			data-test="dark-mode-toggle"
 			className={
-				darkMode
+				(darkMode
 					? "bg-gray-50 text-gray-900 p-2 rounded-md cursor-pointer"
-					: "bg-gray-900 text-gray-50 p-2 rounded-md cursor-pointer"
+					: "bg-gray-900 text-gray-50 p-2 rounded-md cursor-pointer") +
+				"border-none ring-transparent"
 			}
 		>
 			{darkMode ? (
@@ -39,7 +41,7 @@ const DarkModeToggle = () => {
 					/>
 				</svg>
 			)}
-		</div>
+		</button>
 	);
 };
 
